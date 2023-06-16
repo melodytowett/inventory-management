@@ -1,0 +1,21 @@
+spring:
+h2:
+  console:
+    enabled: true
+    path: /h2-console
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+  generate-ddl: true
+datasource:
+  url: ${DATABASE_URL:jdbc:h2:mem:inventory}
+  username: ${DATABASE_USERNAME:sa}
+  password: ${DATABASE_PASSWORD:password}
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+spring-doc:
+  swagger-ui:
+    path: /swagger-ui.html
